@@ -1,0 +1,36 @@
+&tgcm_input
+ START_YEAR = 2002
+ START_DAY  = 345
+ CALENDAR_ADVANCE = 0
+ SOURCE = '$TGCMDATA/zp11/tiegcm_res2.5_decsol_smin_prim.nc'
+! SOURCE = '/glade/work/ycai/tiegcm2.5_dec/tiegcm.exec/tiegcm2.5_res0.25x0.25_decsol_smin_prim_001.nc'
+! SOURCE = '/glade/p/hao/tgcm/data/tiegcm2.0/tiegcm_res0.25_decsol_smin_prim.nc'
+ SOURCE_START = 355 0 0
+ START = 345 0 0
+ STOP  = 360 0 0
+ STEP  = 30
+ OPLUS_STEP = 0.15
+ HIST = 1 0 0
+ OUTPUT = 'z11_tiegcm2.5_res0.25x0.25_decsol_smin_prim_001.nc'
+ MXHIST_PRIM = 20
+ SECSTART = 345 1 0
+ SECSTOP  = 360 0 0
+ SECHIST  =  0 1 0
+! SECOUT   = 'test_res0.25x0.25_decsol_smin_sech_001.nc','to', 'test_res0.25x0.25_decsol_smin_sech_020.nc','by','1'
+ SECOUT   = 'z11_flx0.5_tiegcm2.5_res0.25x0.25_decsol_smin_sech_001.nc','to', 'z11_flx0.5_tiegcm2.5_res0.25x0.25_decsol_smin_sech_020.nc','by','1'
+ MXHIST_SECH = 24
+ SECFLDS = 'TN' 'UN' 'VN' 'WN' 'O2' 'O1' 'N2' 'NO' 'N4S' 'HE' 'NE' 
+           'TE' 'TI' 'FE_KI' 'TEC' 'OPFLUX' 'O2P' 'OP' 'POTEN' 'UI_ExB' 'VI_ExB' 
+           'WI_ExB' 'DEN' 'QJOULE' 'HMF2' 'NMF2' 'Z' 'ZG' 'ZGMID' 'L_EN2' 'L_EO2'
+           'L_EO1D' 'L_EO1' 'L_XEN' 'L_EN' 'L_EI' 'L_IN' 'DJINT'
+ GSWM_MI_DI_NCFILE  = '$TGCMDATA/gswm_diurn_2.5d_99km.nc'
+ GSWM_MI_SDI_NCFILE = '$TGCMDATA/gswm_semi_2.5d_99km.nc'
+ GSWM_NM_DI_NCFILE  = '$TGCMDATA/gswm_nonmig_diurn_2.5d_99km.nc'
+ GSWM_NM_SDI_NCFILE = '$TGCMDATA/gswm_nonmig_semi_2.5d_99km.nc'
+!GPI_NCFILE='/glade/p/hao/tgcm/data/tiegcm2.0/gpi_1960001-20153161.nc' 
+ POTENTIAL_MODEL = 'HEELIS'
+ POWER   = 18.
+ CTPOTEN = 30.
+ F107    = 80.
+ F107A   = 80.
+/
